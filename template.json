@@ -1,0 +1,62 @@
+[
+    {
+        "ident": "38o6of",
+        "tested": false,
+        "autoAckOperation": true,
+        "source": "{\"id\":\"postman\",\"type\":\"temp\",\"value\":123.4,\"time\":\"1970-01-01T00:00:01+00:00\"}",
+        "externalIdType": "c8y_Serial",
+        "qos": "AT_LEAST_ONCE",
+        "substitutions": [
+            {
+                "resolve2ExternalId": false,
+                "pathSource": "id",
+                "pathTarget": "source.id",
+                "repairStrategy": "DEFAULT",
+                "expandArray": false
+            },
+            {
+                "resolve2ExternalId": false,
+                "pathSource": "value",
+                "pathTarget": "kafka_TemperatureMeasurement.processTemp.value",
+                "repairStrategy": "DEFAULT",
+                "expandArray": false
+            },
+            {
+                "resolve2ExternalId": false,
+                "pathSource": "time",
+                "pathTarget": "time",
+                "repairStrategy": "DEFAULT",
+                "expandArray": false
+            }
+        ],
+        "snoopedTemplates": [
+            "{\"id\":\"postman\",\"type\":\"temp\",\"value\":123.4}",
+            "{\"id\":\"postman\",\"type\":\"temp\",\"value\":123.4}",
+            "{\"id\":\"postman\",\"type\":\"temp\",\"value\":123.4}",
+            "{\"id\":\"postman\",\"type\":\"temp\",\"value\":123.4}",
+            "{\"id\":\"postman\",\"type\":\"temp\",\"value\":123.4}",
+            "{\"id\":\"postman\",\"type\":\"temp\",\"value\":123.4}",
+            "{\"id\":\"postman\",\"type\":\"temp\",\"value\":123.4}",
+            "{\"id\":\"postman\",\"type\":\"temp\",\"value\":123.4}",
+            "{\"id\":\"postman\",\"type\":\"temp\",\"value\":123.4}",
+            "{\"id\":\"postman\",\"type\":\"temp\",\"value\":123.4}"
+        ],
+        "createNonExistingDevice": true,
+        "id": "1716235",
+        "subscriptionTopic": "/elliotech/dynamic/mapper",
+        "direction": "INBOUND",
+        "mappingTopicSample": "/elliotech/dynamic/mapper",
+        "snoopStatus": "STOPPED",
+        "debug": false,
+        "mapDeviceIdentifier": true,
+        "active": true,
+        "targetAPI": "MEASUREMENT",
+        "target": "{\"kafka_TemperatureMeasurement\":{\"processTemp\":{\"unit\":\"C\",\"value\":0}},\"time\":\"1970-01-01T00:00:01+00:00\",\"source\":{\"id\":\"0\"},\"type\":\"c8y_TemperatureMeasurement\"}",
+        "updateExistingDevice": false,
+        "mappingType": "JSON",
+        "lastUpdate": 1731516327462,
+        "name": "mosquitto-to-c8y",
+        "supportsMessageContext": false,
+        "mappingTopic": "/elliotech/dynamic/mapper"
+    }
+]
