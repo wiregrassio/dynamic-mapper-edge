@@ -1,8 +1,9 @@
+clear
 docker container run \
 -it \
 --rm \
--v $(pwd)/listener.py:/home/listener.py \
 -v $(pwd)/template.json:/home/template.json \
--v $(pwd)/mapper.py:/home/mapper.py \
+-e INBOUND_TOPIC="/c8y/inbound/topic" \
+--network="host" \
 wiregrass:dynamic-mapper-edge \
 /bin/bash

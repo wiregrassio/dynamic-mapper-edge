@@ -1,9 +1,12 @@
-FROM python:3.13.0-slim-bookworm
+FROM python:3.13.0-alpine3.20 
 
-RUN apt-get update && apt-get install -y 
+RUN apk upgrade --no-cache
 
 WORKDIR /home
 COPY ./requirements.txt .
 RUN pip3 install -r requirements.txt
 
-#ENTRYPOINT [ "/bin/bash" ]
+COPY app.py .
+COPY listener.py .
+
+ENTRYPOINT [ "/usr/bin/env", "python", "listener.py" ]

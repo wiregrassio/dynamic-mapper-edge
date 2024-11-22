@@ -1,2 +1,2 @@
+jsonata-python
 paho-mqtt
-jsonpath-rw

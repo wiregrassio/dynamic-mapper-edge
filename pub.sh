@@ -1,0 +1,1 @@
+tedge mqtt pub "/c8y/inbound/topic" '{"id": "Postman" , "type": "temperature" , "value": '$(shuf -i 1-100 -n 1)' , "time":"'$(date -u +"%Y-%m-%dT%H:%M:%SZ")'"}'
