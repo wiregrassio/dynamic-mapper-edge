@@ -5,5 +5,4 @@ docker container run \
 -v $(pwd)/template.json:/home/template.json \
 -e INBOUND_TOPIC="/c8y/inbound/topic" \
 --network="host" \
-wiregrass:dynamic-mapper-edge \
-/bin/bash
+wiregrass:dynamic-mapper-edge
